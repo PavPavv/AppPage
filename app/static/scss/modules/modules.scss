@@ -1,0 +1,6 @@
+// Здесь подключаются все модули, которые затем импортятся на главый scss файл для конвертации в main.css
+
+@import "dashboard/dashboard.scss";
+@import "platforms/platforms.scss";
+@import "buttons/buttons.scss";
+@import "small-block/small-block.scss";

@@ -1,0 +1,73 @@
+@import "libs.scss";
+@import "utils/fonts.scss";
+@import "utils/variables.scss";
+@import "utils/mixins.scss";
+
+html{
+	font-size: 14px;
+	height: 100%;
+
+	&.fixed{
+		overflow: hidden;
+
+		body{
+			overflow: hidden;
+		}
+	}
+}
+body{
+	font-family: 'Arial',sans-serif;
+	max-width: 100%;
+	height: 100vh;
+	margin: 0;
+	color: $second_color;
+	background-color: $bg_color;
+}
+h1, h2, h3, h4, h5, h6{
+	margin: 0;
+}
+ul, li{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+p{
+	margin: 0;
+}
+audio,
+video,
+canvas,
+iframe,
+img,
+svg,
+textarea{vertical-align: middle;}
+
+textarea{resize: none;}
+
+input,
+select,
+button{outline: none;}
+
+*, *:before, *:after{box-sizing: border-box;}
+
+.wrapper{
+	position: relative;
+	border-radius: 4px;
+	padding: 30px 60px;
+	background-color: $main_color;
+	margin: 15px;
+	@media(max-width: $phone-size) {
+		padding: 10px 30px;
+	}
+
+}
+.content{
+	flex: 1 0 auto;
+}
+
+//Modules
+
+@import "modules/modules";

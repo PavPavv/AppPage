@@ -1,0 +1,107 @@
+.dashboard{
+	display: flex;
+	margin-bottom: 35px;
+	@media(max-width: $phone-size) {
+		flex-direction: column;		
+	}
+
+	&__col{
+		display: flex;
+		flex: 1 0 calc(50% - 20px);
+		width: calc(50% - 5px);
+
+		@media(max-width: $tablet-size) {
+			display: flex;
+			flex-direction: column;
+			margin-right: 5px;
+		}
+		@media(max-width: $phone-size) {
+			flex: 1 0 calc(100%);
+			width: calc(100%);
+			&:last-child{
+				margin-top: 5px;
+			}
+		}
+
+		&:last-child{
+			.dashboard__item:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__item{
+		display: flex;
+		flex: 1 0 calc(50% - 20px);
+		width: calc(50% - 5px);
+		justify-content: space-between;
+		border-radius: 4px;
+		margin-right: 5px;
+		padding: 22px 15px 22px 25px;
+		color: $main_color;
+		background: $corporate_color;
+		transition: linear .3s;
+		@media(max-width: $tablet-size) {
+			flex: 1 0 calc(100%);
+			width: calc(100%);
+
+			&:nth-child(even) {
+				margin-top: 5px;
+			}
+		}
+
+		&:hover{
+			background: #380163;
+		}
+
+	}
+
+	&__info{
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__number{
+		font-size: 26px;
+		font-weight: bold;
+		line-height: 27px;
+		margin-bottom: 5px;
+		@media(max-width: $small-size) {
+			font-size: 20px;
+		}
+	}
+
+	&__text{
+
+		@media(max-width: $small-size) {
+			font-size: 12px;
+		}
+	}
+
+	&__img{
+		display: block;
+		width: 40px;
+		height: 40px;
+
+		&--review{
+			background: url("../i/icon/review.png") no-repeat;
+			background-position: 0 0;
+		}
+
+		&--messages{
+			background: url("../i/icon/messages.png") no-repeat;
+			background-position: 0 0;
+		}
+
+		&--update{
+			background: url("../i/icon/update.png") no-repeat;
+			background-position: 0 0;
+		}
+
+		&--rating{
+			background: url("../i/icon/rating.png") no-repeat;
+			background-position: 0 0;
+		}
+	}
+
+}
